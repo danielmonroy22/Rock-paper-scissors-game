@@ -15,7 +15,7 @@ body {
 .main {
     height: 100%;
 
-    background-image: url(/Images/cosmic-gif.gif);
+    background-image: url(./Images/cosmic-gif.gif);
     background-size: 100%;
     color: white;
     display: flex;
