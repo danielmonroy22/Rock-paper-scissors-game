@@ -44,7 +44,7 @@ h1 {
 }
 
 h2 {
-    padding: 50px;
+    padding: 10px 50px;
 
 }
 
@@ -186,6 +186,7 @@ button span {
 
 .score {
     background-color: rgb(15, 57, 208);
+    border-radius: 20px;
     width: 30%;
     height: 30%;
 
@@ -230,4 +231,5 @@ button span {
 
 p {
     font-size: 3rem;
+    padding: 50px 0px;
 }

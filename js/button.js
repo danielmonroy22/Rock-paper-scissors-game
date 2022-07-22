@@ -82,6 +82,7 @@ btn.addEventListener('click', function () {
         startContainer.style.display = 'none';
     }, 100);
     setTimeout(() => { typeWriter(); }, 500);
+
     // Add event listener to all of the game buttons
     // gameButtons = document.querySelectorAll(".gameselection").forEach(item => {
     //     item.addEventListener("click", playSound);
@@ -89,13 +90,41 @@ btn.addEventListener('click', function () {
 });
 
 let i = 0;
+let i2 = 0;
 let txt = 'Rock, Paper, Scissors?';
+let txt2 = 'You Only Have 5 Clicks!'
 let speed = 50;
+let speed2 = 10;
 
 function typeWriter() {
     if (i < txt.length) {
         document.getElementById("gameh1").innerHTML += txt.charAt(i);
+
+
         i++;
+        if (i === txt.length - 1) {
+
+            for (var j = 0; j < txt2.length; j++) {
+
+                typeWriter2();
+
+
+            }
+        }
         setTimeout(typeWriter, speed);
     }
 }
+function typeWriter2() {
+    if (i2 < txt2.length) {
+        document.getElementById("gameh2").innerHTML += txt2.charAt(i2);
+        i2++;
+
+
+
+
+
+    }
+    setTimeout(typeWriter2, speed2);
+}
+
+
