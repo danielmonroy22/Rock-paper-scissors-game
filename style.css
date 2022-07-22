@@ -164,16 +164,16 @@ button span {
 
 #rock {
     /*  */
-    background-image: url(/Images/gesture.png);
+    background-image: url(./Images/gesture.png);
 }
 
 #paper {
-    background-image: url(/Images/hold.png);
+    background-image: url(./Images/hold.png);
 }
 
 #scissors {
 
-    background-image: url(/Images/scissors.png);
+    background-image: url(./Images/scissors.png);
 }
 
 .score {
