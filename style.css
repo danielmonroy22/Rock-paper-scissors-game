@@ -12,8 +12,8 @@ body {
 
 }
 
-.main {
-    height: 100%;
+#start-section {
+    height: 100vh;
 
     background-image: url(./Images/cosmic-gif.gif);
     background-size: 100%;
@@ -22,6 +22,22 @@ body {
     flex-direction: column;
     align-items: center;
 
+
+
+}
+
+
+#end-section {
+
+
+    height: 100vh;
+
+    background-image: url(./Images/cosmic-gif.gif);
+    background-size: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 
 }
@@ -35,10 +51,28 @@ body {
 
 }
 
+.headins-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+}
+
+.score {
+    background-color: aqua;
+    display: flex;
+    padding: 10px;
+}
+
 h1 {
     padding: 50px;
 
 }
+
+
+
 
 .button-div {
 
@@ -55,6 +89,7 @@ button {
     padding: 0;
     height: auto;
     margin: auto;
+
 
     border: none;
 
