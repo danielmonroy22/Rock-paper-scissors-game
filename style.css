@@ -18,6 +18,7 @@ body {
     height: 100vh;
 
     background-image: url(./Images/cosmic-gif.gif);
+
     background-size: 100%;
     color: white;
     display: flex;
@@ -42,6 +43,10 @@ h1 {
 
 }
 
+h2 {
+    padding: 50px;
+
+}
 
 
 
@@ -118,6 +123,7 @@ button span {
     height: 100vh;
 
     background-image: url(./Images/cosmic-gif.gif);
+    /* background: linear-gradient(to right top, #65dfc9, #6cdbeb); */
     background-size: 100%;
     color: white;
     display: none;
@@ -130,23 +136,25 @@ button span {
 .gameplay-div {
     display: flex;
 
-    width: 80%;
+
+    width: 100%;
     height: 80%;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .container-drawings-player {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 20px;
+    gap: 60px;
 }
 
 .container-drawings-pc {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 20px;
+    gap: 60px;
 
 }
 
@@ -177,10 +185,49 @@ button span {
 }
 
 .score {
+    background-color: rgb(15, 57, 208);
+    width: 30%;
+    height: 30%;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 
+
+
+}
+
+.player-score {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+
+
+
+
+
+    flex: 1;
+
+
+}
+
+.pc-score {
+
+
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: start;
+    flex: 1;
+
+
+
+}
+
+p {
+    font-size: 3rem;
 }
