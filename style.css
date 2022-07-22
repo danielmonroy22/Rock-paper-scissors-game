@@ -12,6 +12,8 @@ body {
 
 }
 
+/* START SECTION */
+
 #start-section {
     height: 100vh;
 
@@ -26,44 +28,13 @@ body {
 
 }
 
-
-#end-section {
-
-
-    height: 100vh;
-
-    background-image: url(./Images/cosmic-gif.gif);
-    background-size: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-
-}
-
-.headings {
+.headings-start {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 1;
 
 
-}
-
-.headins-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-
-}
-
-.score {
-    background-color: aqua;
-    display: flex;
-    padding: 10px;
 }
 
 h1 {
@@ -99,7 +70,7 @@ button {
 
 button span {
     font-family: 'Press Start 2P', cursive;
-    background: url(/Images/pexels-alexander-ant-7004739.jpg);
+    background: url(/Images/ButtonBackground.jpg);
     background-size: 100%;
     font-size: 3rem;
     color: white;
@@ -123,5 +94,93 @@ button span {
     font-weight: 600;
     perspective-origin: 0 0;
     letter-spacing: 0;
+
+}
+
+
+
+
+/* END SECTION */
+
+
+.headings-end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+#end-section {
+
+
+    height: 100vh;
+
+    background-image: url(./Images/cosmic-gif.gif);
+    background-size: 100%;
+    color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.gameplay-div {
+    display: flex;
+
+    width: 80%;
+    height: 80%;
+    justify-content: space-evenly;
+}
+
+.container-drawings-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.container-drawings-pc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+
+}
+
+.drawing {
+    padding: 40px;
+
+    height: 8rem;
+    width: 8rem;
+
+
+    background-size: 100%;
+
+
+}
+
+#rock {
+    /*  */
+    background-image: url(/Images/gesture.png);
+}
+
+#paper {
+    background-image: url(/Images/hold.png);
+}
+
+#scissors {
+
+    background-image: url(/Images/scissors.png);
+}
+
+.score {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
 }

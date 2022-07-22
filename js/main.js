@@ -1,6 +1,15 @@
-// var playerpoints = 0;
-// var pcpoints = 0;
+var playerchoice = document.querySelectorAll('.drawing');
 
+var choice1;
+
+
+
+playerchoice.forEach(choice => {
+    choice.addEventListener('click', (e) => {
+        choice1 = choice.id;
+        console.log(choice1);
+    });
+});
 
 
 
@@ -23,6 +32,10 @@
 //         pcpoints = 0;
 //     }
 // }
+
+// // function to define who wins the round
+// var playerpoints = 0;
+// var pcpoints = 0;
 
 // function playRound(playerSelection, computerSelection) {
 //     const playerSel = playerSelection.toLowerCase();
@@ -72,6 +85,7 @@
 
 
 // }
+// // function to get the computer choice
 
 // function getComputerChoice() {
 //     const randomnum = Math.floor(Math.random() * 3) + 1;
@@ -90,5 +104,6 @@
 // }
 
 
-// Function to hide start div and show end div
+
+
 

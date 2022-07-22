@@ -69,18 +69,33 @@ function myFunction() {
 
 
 let startContainer = document.getElementById('start-section');
+let endContainer = document.getElementById('end-section');
 let btn = document.querySelector("button");
 
 btn.addEventListener('click', function () {
     startContainer.style.opacity = 0;
     startContainer.style.transform = 'scale(0)';
+    endContainer.style.display = 'flex';
+
     // Add timeout with length matching animation-duration 
     window.setTimeout(function () {
         startContainer.style.display = 'none';
-    }, 700);
-    setTimeout(() => { typeWriter(); }, 1000);
+    }, 100);
+    setTimeout(() => { typeWriter(); }, 500);
     // Add event listener to all of the game buttons
-    gameButtons = document.querySelectorAll(".gameselection").forEach(item => {
-        item.addEventListener("click", playSound);
-    })
+    // gameButtons = document.querySelectorAll(".gameselection").forEach(item => {
+    //     item.addEventListener("click", playSound);
+    // })
 });
+
+let i = 0;
+let txt = 'Rock, Paper, Scissors?';
+let speed = 50;
+
+function typeWriter() {
+    if (i < txt.length) {
+        document.getElementById("gameh1").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
