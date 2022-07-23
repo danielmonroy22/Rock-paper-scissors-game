@@ -23,36 +23,10 @@ playerchoice.forEach(choice => {
             p_player.innerHTML = 0;
             p_pc.innerHTML = 0;
         }
-
-
-
-
     });
 });
 
-
-
-// for (let i = 0; i < 5; i++) {
-//     // const playerSelection = prompt("What's your selection?");;
-//     const computerSelection = getComputerChoice();
-//     console.log(playRound(playerSelection, computerSelection));
-
-
-
-//     if (i === 4) {
-//         if (playerpoints > pcpoints) {
-//             alert("player wins");
-//         }
-//         else {
-//             alert("pc wins");
-
-//         }
-//         playerpoints = 0;
-//         pcpoints = 0;
-//     }
-// }
-
-// // function to define who wins the round
+//function to define who wins the round
 
 
 function playRound(playerSelection, computerSelection) {
@@ -111,7 +85,7 @@ function playRound(playerSelection, computerSelection) {
 
 
 }
-// // function to get the computer choice
+//function to get the computer choice
 
 function getComputerChoice() {
     const randomnum = Math.floor(Math.random() * 3) + 1;

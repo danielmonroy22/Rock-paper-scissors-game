@@ -1,3 +1,6 @@
+
+// function to calculate the angle for the button
+
 let calculateAngle = function (e, item, parent) {
     let dropShadowColor = `rgba(0, 0, 0, 0.3)`
     // If the button has a data-filter-color attribute, then use this for the shadow's color
@@ -61,12 +64,17 @@ document.querySelectorAll('.button').forEach(function (item) {
 })
 
 
+// EVENT LISTENER FOR BUTTON START GAME
+
 document.querySelector("button").addEventListener("click", myFunction);
 
 function myFunction() {
     document.querySelector("button").style.display = "none";
 }
+//
 
+
+// change containers from start-container to end-container
 
 let startContainer = document.getElementById('start-section');
 let endContainer = document.getElementById('end-section');
@@ -88,6 +96,8 @@ btn.addEventListener('click', function () {
     //     item.addEventListener("click", playSound);
     // })
 });
+
+// headings in the end-section typewriter
 
 let i = 0;
 let i2 = 0;
