@@ -1,6 +1,12 @@
 var playerchoice = document.querySelectorAll('.drawing');
 var p_player = document.querySelector('.p-player');
 var p_pc = document.querySelector('.p-pc');
+var winner = document.querySelector('.Winner');
+
+var win_section = document.getElementById('win-sectionid');
+let endContainer1 = document.getElementById('end-section');
+let restartButton = document.querySelector('.restart');
+
 
 
 var choice_player;
@@ -8,23 +14,72 @@ var pc_choice;
 var playerpoints = 0;
 var pcpoints = 0;
 var clicks = 0;
-
+let winner_text = "YOU HAVE WON!"
+let looser_text = "YOU LOST!"
+let tie_text = "NOBODY WON!"
+keeptrack();
 
 // each time they click they are playing against each other
-playerchoice.forEach(choice => {
+function keeptrack() {
 
-    choice.addEventListener('click', (e) => {
-        clicks++;
-        choice_player = choice.id;
-        pc_choice = getComputerChoice();
-        playRound(choice_player, pc_choice);
-        if (clicks === 5) {
-            alert("se ha acabado el juego");
-            p_player.innerHTML = 0;
-            p_pc.innerHTML = 0;
-        }
+
+    playerchoice.forEach(choice => {
+
+        choice.addEventListener('click', (e) => {
+            clicks++;
+            choice_player = choice.id;
+            pc_choice = getComputerChoice();
+            playRound(choice_player, pc_choice);
+            if (clicks === 5) {
+                if (pcpoints > playerpoints) {
+                    winner.innerHTML = looser_text;
+
+
+
+                }
+                else if (pcpoints < playerpoints) {
+                    winner.innerHTML = winner_text;
+
+
+
+                }
+                else {
+                    winner.innerHTML = tie_text;
+
+
+                }
+                endContainer1.style.display = 'none';
+                win_section.style.display = 'flex';
+
+
+
+
+
+                pcpoints = 0;
+                playerpoints = 0;
+
+                p_player.innerHTML = 0;
+                p_pc.innerHTML = 0;
+            }
+        });
     });
+}
+// restart button event listener
+restartButton.addEventListener("click", function () {
+    endContainer1.style.display = 'flex';
+    win_section.style.display = 'none';
+
+    pcpoints = 0;
+    playerpoints = 0;
+
+    p_player.innerHTML = 0;
+    p_pc.innerHTML = 0;
+    clicks = 0;
+    keeptrack();
+
 });
+
+
 
 //function to define who wins the round
 

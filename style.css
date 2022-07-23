@@ -233,3 +233,28 @@ p {
     font-size: 3rem;
     padding: 50px 0px;
 }
+
+/* WIN SECTION */
+.win-section {
+    height: 80vh;
+    background: url(/Images/winner.gif);
+    background-size: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.Winner {
+    color: white;
+
+}
+
+.restart {
+    padding: 30px;
+    border-radius: 20px;
+    background-color: white;
+    font-size: larger;
+
+}
