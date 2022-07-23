@@ -237,7 +237,7 @@ p {
 /* WIN SECTION */
 .win-section {
     height: 80vh;
-    background: url(/Images/winner.gif);
+    background: url(./Images/winner.gif);
     background-size: 100%;
     display: none;
     flex-direction: column;
