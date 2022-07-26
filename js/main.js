@@ -17,53 +17,53 @@ var clicks = 0;
 let winner_text = "YOU HAVE WON!"
 let looser_text = "YOU LOST!"
 let tie_text = "NOBODY WON!"
-keeptrack();
+// keeptrack();
 
 // each time they click they are playing against each other
-function keeptrack() {
-
-
-    playerchoice.forEach(choice => {
-
-        choice.addEventListener('click', (e) => {
-            clicks++;
-            choice_player = choice.id;
-            pc_choice = getComputerChoice();
-            playRound(choice_player, pc_choice);
-            if (clicks === 5) {
-                if (pcpoints > playerpoints) {
-                    winner.innerHTML = looser_text;
 
 
 
-                }
-                else if (pcpoints < playerpoints) {
-                    winner.innerHTML = winner_text;
+playerchoice.forEach(choice => {
+
+    choice.addEventListener('click', (e) => {
+        clicks++;
+        choice_player = choice.id;
+        pc_choice = getComputerChoice();
+        playRound(choice_player, pc_choice);
+        if (clicks === 5) {
+            if (pcpoints > playerpoints) {
+                winner.innerHTML = looser_text;
 
 
 
-                }
-                else {
-                    winner.innerHTML = tie_text;
-
-
-                }
-                endContainer1.style.display = 'none';
-                win_section.style.display = 'flex';
-
-
-
-
-
-                pcpoints = 0;
-                playerpoints = 0;
-
-                p_player.innerHTML = 0;
-                p_pc.innerHTML = 0;
             }
-        });
+            else if (pcpoints < playerpoints) {
+                winner.innerHTML = winner_text;
+
+
+
+            }
+            else {
+                winner.innerHTML = tie_text;
+
+
+            }
+            endContainer1.style.display = 'none';
+            win_section.style.display = 'flex';
+
+
+
+
+
+            pcpoints = 0;
+            playerpoints = 0;
+
+            p_player.innerHTML = 0;
+            p_pc.innerHTML = 0;
+        }
     });
-}
+});
+
 // restart button event listener
 restartButton.addEventListener("click", function () {
     endContainer1.style.display = 'flex';
@@ -75,7 +75,7 @@ restartButton.addEventListener("click", function () {
     p_player.innerHTML = 0;
     p_pc.innerHTML = 0;
     clicks = 0;
-    keeptrack();
+
 
 });
 
